@@ -1,12 +1,6 @@
 /* eslint-disable no-console,import/prefer-default-export,no-undef */
 import getMoney from './services';
 
-
-// document.addEventListener('DOMContentLoaded', () => {
-// const bitcoin = document.querySelector('.bitcoin');
-// });
-
-
 export function name() {
   getMoney().then(obj => obj.name)
     .then((v) => {
@@ -15,24 +9,33 @@ export function name() {
     });
 }
 
-// export function disclaimer() {
-//   getMoney().then(obj => obj.disclaimer);
-// }
-// export function dolarName() {
-//   getMoney().then(obj => obj.dolarName);
-// }
-// export function dolarRate() {
-//   getMoney().then(obj => obj.dolarRate);
-// }
-// export function euroName() {
-//   getMoney().then(obj => obj.euroName);
-// }
-// export function euroRate() {
-//   getMoney().then(obj => obj.euroRate);
-// }
-// export function poundName() {
-//   getMoney().then(obj => obj.poundName);
-// }
-// export function poundRate() {
-//   getMoney().then(obj => obj.poundRate);
-// }
+export function disclaimer() {
+  getMoney().then(obj => obj.disclaimer)
+    .then((v) => {
+      const bitcoin = document.querySelector('.disclaimer');
+      bitcoin.innerText = v;
+    });
+}
+export function dolar() {
+  getMoney().then(obj => (`${obj.dolarName} : ${obj.dolarRate}`))
+    .then((v) => {
+      const bitcoin = document.querySelector('.dolar');
+      bitcoin.innerText = v;
+    });
+}
+
+export function euro() {
+  getMoney().then(obj => (`${obj.euroName} : ${obj.euroRate}`))
+    .then((v) => {
+      const bitcoin = document.querySelector('.euro');
+      bitcoin.innerText = v;
+    });
+}
+
+export function pound() {
+  getMoney().then(obj => (`${obj.poundName} : ${obj.poundRate}`))
+    .then((v) => {
+      const bitcoin = document.querySelector('.pound');
+      bitcoin.innerText = v;
+    });
+}
