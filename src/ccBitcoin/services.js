@@ -9,13 +9,14 @@ export default async function update() {
     const response = await fetch(URL);
     if (response.ok) {
       const btc = await response.json();
-      setTimeout(update, 1000);
+      setTimeout(update, 1000*10);
       return convertInfo(btc);
     }
     throw Error('response not ok');
   } catch (err) {
     console.warn('zjebało się');
-    setTimeout(update, 1000);
+    setTimeout(update, 1000*10);
     return '';
   }
 }
+update()

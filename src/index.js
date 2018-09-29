@@ -1,14 +1,19 @@
 /* eslint-disable no-unused-vars */
 
 import {
-  name, disclaimer, dolar, euro, pound,
+  disclaimer, dolar, euro, pound,
 } from './ccBitcoin/index';
 
 setInterval(function(){
-    name();
+    // name();
     disclaimer();
     dolar();
     euro();
     pound();
-}, 3000);
+}, 1100*10);
 
+// name();
+disclaimer();
+dolar();
+euro();
+pound();

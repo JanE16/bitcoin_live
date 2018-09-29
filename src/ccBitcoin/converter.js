@@ -9,7 +9,7 @@ export default ({
   },
   bpi: {
     EUR: {
-      description: euroName,
+      code: euroName,
     },
   },
   bpi: {
@@ -19,7 +19,7 @@ export default ({
   },
   bpi: {
     USD: {
-      description: dolarName,
+      code: dolarName,
     },
   },
   bpi: {
@@ -29,7 +29,7 @@ export default ({
   },
   bpi: {
     GBP: {
-      description: poundName,
+      code: poundName,
     },
   },
   chartName: name,
