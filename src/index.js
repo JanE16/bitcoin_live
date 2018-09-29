@@ -4,9 +4,11 @@ import {
   name, disclaimer, dolar, euro, pound,
 } from './ccBitcoin/index';
 
+setInterval(function(){
+    name();
+    disclaimer();
+    dolar();
+    euro();
+    pound();
+}, 3000);
 
-name();
-disclaimer();
-dolar();
-euro();
-pound();
