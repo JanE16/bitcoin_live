@@ -16,7 +16,7 @@ export function dolar() {
       const upDown = document.querySelector('.up-down');
       const arrow = document.querySelector('.arrow');
       const arrowWrapper = document.querySelector('.arrow-wrapper');
-      if(bitcoin.innerText <= v) {
+      if(bitcoin.innerText < v) {
           bitcoin.style.color = 'green';
           upDown.innerText = 'UP';
           upDown.style.color = 'green';
@@ -24,7 +24,7 @@ export function dolar() {
           arrowWrapper.style.transform = 'rotate(90deg)';
           arrowWrapper.style.transformOrigin = '50% 50%';
 
-      } else {
+      } if (bitcoin.innerText > v) {
           bitcoin.style.color = 'red';
           upDown.innerText = 'DOWN';
           upDown.style.color = 'red';
