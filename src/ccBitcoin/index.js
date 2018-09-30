@@ -16,7 +16,7 @@ export function dolar() {
       const upDown = document.querySelector('.up-down');
       const arrow = document.querySelector('.arrow');
       const arrowWrapper = document.querySelector('.arrow-wrapper');
-      if(bitcoin.innerText < v) {
+      if (bitcoin.innerText < v) {
           bitcoin.style.color = 'green';
           upDown.innerText = 'UP';
           upDown.style.color = 'green';
@@ -30,7 +30,6 @@ export function dolar() {
           upDown.style.color = 'red';
           arrow.style.fill = 'red';
           arrowWrapper.style.transform = 'rotate(270deg)';
-          arrowWrapper.style.transformOrigin = '30% 50%';
       }
       bitcoin.innerText = `${v}`;
     });
@@ -40,12 +39,13 @@ export function euro() {
   getMoney().then(obj => (`${obj.euroRate}`))
     .then((v) => {
       const bitcoin = document.querySelector('.euro');
-        if(bitcoin.innerText <= v) {
+        if(bitcoin.innerText < v) {
             bitcoin.style.color = 'green'
-        } else {
-            bitcoin.style.color = 'red';
         }
-      bitcoin.innerText = `${v}`;
+        if (bitcoin.innerText > v) {
+            bitcoin.style.color = 'red'
+        }
+        bitcoin.innerText = `${v}`;
     });
 }
 
@@ -53,10 +53,11 @@ export function pound() {
   getMoney().then(obj => (`${obj.poundRate}`))
     .then((v) => {
       const bitcoin = document.querySelector('.pound');
-        if(bitcoin.innerText <= v) {
+        if(bitcoin.innerText < v) {
             bitcoin.style.color = 'green'
-        } else {
-            bitcoin.style.color = 'red';
+        }
+        if (bitcoin.innerText > v) {
+            bitcoin.style.color = 'red'
         }
       bitcoin.innerText = `${v}`;
     });
