@@ -37,8 +37,7 @@ body, html {
 .main-content {
   width: 100%;
   min-height: 100%;
-  padding-bottom: 120px;
-  padding-top: 70px;
+  padding-bottom: 40px;
   @media (min-width: 576px) {
     padding-bottom: 100px;
   }
@@ -80,6 +79,9 @@ body, html {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
+  background-color: rgba(255,0,255,.1);
+  padding: 3rem;
+  border-radius: 5px;
   @media (max-width: 768px) {
     justify-content: center;
   }
@@ -101,8 +103,8 @@ body, html {
 .statement {
   display: flex;
   justify-content: center;
-  padding-top: 120px;
   font-size: 3rem;
+  padding-top: 20px;
   text-align: center;
   @media (max-width: 768px) {
     padding-top: 40px;
